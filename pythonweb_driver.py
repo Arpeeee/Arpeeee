@@ -10,6 +10,9 @@ python for web
 from selenium import webdriver
 import pandas as pd
 
+your_email = input('your email : ')
+your_password = input('your password : ')
+
 exl = pd.read_excel('C:/Users/user/Downloads/A2648-F-HRD801-middle.xlsx')
 keys = ['Chr','Start', 'End', 'Ref', 'Alt']
 inputtext = ''
@@ -27,14 +30,16 @@ cookies_button.click()
 email = bower.find_element_by_name('username')
 password = bower.find_element_by_name('password')
 
-email.send_keys('B07404014@ntu.edu.tw')
-password.send_keys('zonalin890721')
+email.send_keys(your_email)
+password.send_keys(your_password)
 
 password.submit()
 #
 search = bower.find_element_by_name('query')
 search.send_keys(inputtext)
 
-https://varsome.com/
+
 bower = webdriver.Chrome()
-bower.get()
+bower.get('https://varsome.com/')
+
+bower.find_element_by_class_name('select-selected').send_keys = 'hg19'
