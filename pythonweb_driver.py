@@ -27,8 +27,8 @@ cookies_button.click()
 email = bower.find_element_by_name('username')
 password = bower.find_element_by_name('password')
 
-email.send_keys('B07404014@ntu.edu.tw')
-password.send_keys('zonalin890721')
+email.send_keys('')
+password.send_keys('')
 
 password.submit()
 #
